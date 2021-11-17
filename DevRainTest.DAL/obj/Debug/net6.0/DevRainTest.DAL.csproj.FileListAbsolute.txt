@@ -12,3 +12,6 @@ D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\obj\Debug\net6.0\ref\DevRainTest
 D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\obj\Debug\net6.0\DevRainTest.DAL.pdb
 D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\bin\Debug\net6.0\DevRainTest.DAL.runtimeconfig.json
 D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\obj\Debug\net6.0\DevRainTest.DAL.genruntimeconfig.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\bin\Debug\net6.0\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\bin\Debug\net6.0\DevRainTest.Domain.pdb
+D:\VisualStudio2019\DevRainTest\DevRainTest.DAL\obj\Debug\net6.0\DevRainTest.DAL.csproj.CopyComplete

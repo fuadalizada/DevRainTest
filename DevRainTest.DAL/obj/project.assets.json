@@ -631,6 +631,16 @@
             "rid": "win"
           }
         }
+      },
+      "DevRainTest.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DevRainTest.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevRainTest.Domain.dll": {}
+        }
       }
     }
   },
@@ -1850,10 +1860,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DevRainTest.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DevRainTest.Domain/DevRainTest.Domain.csproj",
+      "msbuildProject": "../DevRainTest.Domain/DevRainTest.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DevRainTest.Domain >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0"
@@ -1885,7 +1902,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VisualStudio2019\\DevRainTest\\DevRainTest.Domain\\DevRainTest.Domain.csproj": {
+              "projectPath": "D:\\VisualStudio2019\\DevRainTest\\DevRainTest.Domain\\DevRainTest.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1898,6 +1919,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
