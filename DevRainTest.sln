@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevRainTest.Domain", "DevRainTest.Domain\DevRainTest.Domain.csproj", "{DE2B9D6C-EA6A-4582-9147-4696F81DFE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevRainTest.DAL", "DevRainTest.DAL\DevRainTest.DAL.csproj", "{AEF8BA90-E127-4B05-9E82-4D90D099CFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE2B9D6C-EA6A-4582-9147-4696F81DFE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2B9D6C-EA6A-4582-9147-4696F81DFE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2B9D6C-EA6A-4582-9147-4696F81DFE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2B9D6C-EA6A-4582-9147-4696F81DFE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF8BA90-E127-4B05-9E82-4D90D099CFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF8BA90-E127-4B05-9E82-4D90D099CFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF8BA90-E127-4B05-9E82-4D90D099CFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF8BA90-E127-4B05-9E82-4D90D099CFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFA0C448-D20A-4682-BA40-641EB2ECAAD4}
+	EndGlobalSection
+EndGlobal

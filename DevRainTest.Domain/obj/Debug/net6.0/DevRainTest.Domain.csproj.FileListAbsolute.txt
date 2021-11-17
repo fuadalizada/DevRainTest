@@ -1,0 +1,12 @@
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\bin\Debug\net6.0\DevRainTest.Domain.deps.json
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\bin\Debug\net6.0\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\bin\Debug\net6.0\ref\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\bin\Debug\net6.0\DevRainTest.Domain.pdb
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.csproj.AssemblyReference.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.AssemblyInfoInputs.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.AssemblyInfo.cs
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.csproj.CoreCompileInputs.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\ref\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Domain\obj\Debug\net6.0\DevRainTest.Domain.pdb
