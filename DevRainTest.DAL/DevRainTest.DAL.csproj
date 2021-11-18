@@ -20,11 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Concrete\" />
-    <Folder Include="Repositories\Abstract\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DevRainTest.Domain\DevRainTest.Domain.csproj" />
   </ItemGroup>
 

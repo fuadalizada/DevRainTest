@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "aef8ba90-e127-4b05-9e82-4d90d099cfcf": {
+      "ProjectGuid": "aef8ba90-e127-4b05-9e82-4d90d099cfcf",
+      "DisplayName": "DevRainTest.DAL",
+      "ColorIndex": 0
+    },
+    "de2b9d6c-ea6a-4582-9147-4696f81dfe77": {
+      "ProjectGuid": "de2b9d6c-ea6a-4582-9147-4696f81dfe77",
+      "DisplayName": "DevRainTest.Domain",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

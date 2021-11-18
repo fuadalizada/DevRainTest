@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DevRainTest.DAL.Settings
+namespace DevRainTest.DAL.ModelConfiguration
 {
     public class UserConfigurations : IEntityTypeConfiguration<User>
     {
