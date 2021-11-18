@@ -1,0 +1,17 @@
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.Business.deps.json
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.Business.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\ref\DevRainTest.Business.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.Business.pdb
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.DAL.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.Domain.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.DAL.pdb
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\bin\Debug\net6.0\DevRainTest.Domain.pdb
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.csproj.AssemblyReference.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.AssemblyInfoInputs.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.AssemblyInfo.cs
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.csproj.CoreCompileInputs.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.csproj.CopyComplete
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\ref\DevRainTest.Business.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.Business\obj\Debug\net6.0\DevRainTest.Business.pdb

@@ -10,7 +10,17 @@
       "ProjectGuid": "de2b9d6c-ea6a-4582-9147-4696f81dfe77",
       "DisplayName": "DevRainTest.Domain",
       "ColorIndex": 1
+    },
+    "d99cfe34-7091-490d-8f63-a8d5d5007c2c": {
+      "ProjectGuid": "d99cfe34-7091-490d-8f63-a8d5d5007c2c",
+      "DisplayName": "DevRainTest.Business",
+      "ColorIndex": 2
+    },
+    "b5ace6cb-5e51-4a07-a6f0-f1965f99e237": {
+      "ProjectGuid": "b5ace6cb-5e51-4a07-a6f0-f1965f99e237",
+      "DisplayName": "DevRainTest.WebApi",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }

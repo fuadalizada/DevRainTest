@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevRainTest.DAL", "DevRainT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevRainTest.Business", "DevRainTest.Business\DevRainTest.Business.csproj", "{D99CFE34-7091-490D-8F63-A8D5D5007C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevRainTest.WebApi", "DevRainTest.WebApi\DevRainTest.WebApi.csproj", "{B5ACE6CB-5E51-4A07-A6F0-F1965F99E237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D99CFE34-7091-490D-8F63-A8D5D5007C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D99CFE34-7091-490D-8F63-A8D5D5007C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D99CFE34-7091-490D-8F63-A8D5D5007C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5ACE6CB-5E51-4A07-A6F0-F1965F99E237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5ACE6CB-5E51-4A07-A6F0-F1965F99E237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5ACE6CB-5E51-4A07-A6F0-F1965F99E237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5ACE6CB-5E51-4A07-A6F0-F1965F99E237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
