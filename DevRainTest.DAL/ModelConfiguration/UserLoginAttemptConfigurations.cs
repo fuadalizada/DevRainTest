@@ -12,6 +12,8 @@ namespace DevRainTest.DAL.ModelConfiguration
             builder.HasKey(t => t.Id);
             builder.Property(p => p.Id).HasColumnName("ID");
             builder.Property(p => p.IsSuccess).HasColumnName("ISSUCCESS").HasColumnType("bit");
+            builder.Property(p => p.UserId).HasColumnName("USER_ID").IsRequired();
+            builder.HasOne(x => x.User).WithMany(x => x.UserLoginAttempts).HasForeignKey(x => x.UserId);
         }
     }
 }
