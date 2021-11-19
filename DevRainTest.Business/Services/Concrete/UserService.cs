@@ -10,18 +10,52 @@ namespace DevRainTest.Business.Services.Concrete
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
-        public UserService(IUserRepository userRepository,IMapper mapper) : base(userRepository,mapper)
+        public UserService(IUserRepository userRepository, IMapper mapper) : base(userRepository, mapper)
         {
             _userRepository = userRepository;
             _mapper = mapper;
         }
         public async Task<IQueryable<UserDto>> GetByEmail(string email)
         {
-            var user = await _userRepository.GetByEmail(email);
-            if (user == null)
-                return null;
-            var result = _mapper.ProjectTo<UserDto>(user);
+            IQueryable <UserDto> result = null;
+            if (IsValidEmail(email))
+            {
+                var user = await _userRepository.GetByEmail(email);
+                if (user == null)
+                    return null;
+                result = _mapper.ProjectTo<UserDto>(user);
+            }
+
             return result;
+        }
+
+        public async Task InitUser(List<UserDto> users)
+        {
+            var userList = _mapper.Map<List<User>>(users);
+            await _userRepository.InitUser(userList);
+        }
+
+        public async Task RemoveOldUsers()
+        {
+            await _userRepository.RemoveOldUsers();
+        }
+
+        bool IsValidEmail(string email)
+        {
+            if (email.Trim().EndsWith("."))
+            {
+                return false;
+            }
+            try
+            {
+                var address = new System.Net.Mail.MailAddress(email);
+                return address.Address == email;
+            }
+            catch
+            {
+
+                return false;
+            }
         }
     }
 }

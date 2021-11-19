@@ -17,5 +17,16 @@ namespace DevRainTest.DAL.Repositories.Concrete
             var result = await _context.Set<User>().Include(x => x.UserLoginAttempts).Where(x => x.Email == email).ToListAsync();
             return result.AsQueryable();
         }
+
+        public async Task InitUser(List<User> users)
+        {           
+           await _context.AddRangeAsync(users);
+           await _context.SaveChangesAsync();
+        }
+      
+        public async Task RemoveOldUsers()
+        {
+            await _context.Database.ExecuteSqlRawAsync("Delete from TBL_USER");
+        }
     }
 }

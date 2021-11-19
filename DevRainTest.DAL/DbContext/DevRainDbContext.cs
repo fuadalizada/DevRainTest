@@ -12,5 +12,14 @@ namespace DevRainTest.DAL.DbContext
 
         public DbSet<User> Users { get; set; }
         public DbSet<UserLoginAttempt> UserLoginAttempts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DevRainDbContext).Assembly);
+            //foreach (Microsoft.EntityFrameworkCore.Metadata.IMutableForeignKey relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            //{
+            //    relationship.DeleteBehavior = DeleteBehavior.ClientCascade;                
+            //}
+        }
     }
 }

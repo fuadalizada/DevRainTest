@@ -2,6 +2,7 @@ using DevRainTest.DAL.Settings;
 using DevRainTest.WebApi.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
+
 AppSettings.ConnectionString = builder.Configuration.GetSection("ConnectionStrings")["DevRainConString"];
 
 // Add services to the container.

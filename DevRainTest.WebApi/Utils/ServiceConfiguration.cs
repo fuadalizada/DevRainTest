@@ -24,6 +24,7 @@ namespace DevRainTest.WebApi.Utils
 
             DependencyInjectionRepositories(services);
             DependencyInjectionServices(services);
+            DependencyInjectionMappers(services);
         }
 
         public void DependencyInjectionRepositories(IServiceCollection service)
@@ -35,6 +36,7 @@ namespace DevRainTest.WebApi.Utils
         public void DependencyInjectionServices(IServiceCollection service)
         {
             service.AddScoped<IUserService, UserService>();
+            service.AddScoped<IUserLoginAttemptService, UserLoginAttemptService>();
         }
 
         private void DependencyInjectionMappers(IServiceCollection service)

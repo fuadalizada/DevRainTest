@@ -5,5 +5,7 @@ namespace DevRainTest.DAL.Repositories.Abstract
     public interface IUserLoginAttemptRepository : IBaseRepository<UserLoginAttempt>
     {
         Task<UserLoginAttempt> Statistic(DateTime? startDate, DateTime? endDate,DateTime metric,bool? isSuccess);
+        Task InitUserLoginAttempt (List<UserLoginAttempt> userLoginAttempts);
+        Task RemoveOldUserLoginAttempts();
     }
 }
