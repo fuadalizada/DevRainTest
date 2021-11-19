@@ -24,9 +24,9 @@ namespace DevRainTest.Business.Services.Concrete
                 if (user == null)
                     return null;
                 result = _mapper.ProjectTo<UserDto>(user);
+                return result;
             }
-
-            return result;
+            return null;           
         }
 
         public async Task InitUser(List<UserDto> users)

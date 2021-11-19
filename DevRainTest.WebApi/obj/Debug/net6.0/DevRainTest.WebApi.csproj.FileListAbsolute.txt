@@ -65,3 +65,7 @@ D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\obj\Debug\net6.0\DevRainTest.
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\obj\Debug\net6.0\ref\DevRainTest.WebApi.dll
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\obj\Debug\net6.0\DevRainTest.WebApi.pdb
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\obj\Debug\net6.0\DevRainTest.WebApi.genruntimeconfig.cache
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
