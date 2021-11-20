@@ -69,3 +69,5 @@ D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Microsoft.As
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\libman.json
+D:\VisualStudio2019\DevRainTest\DevRainTest.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

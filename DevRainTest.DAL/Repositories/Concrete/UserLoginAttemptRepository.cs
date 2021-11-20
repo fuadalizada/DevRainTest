@@ -1,4 +1,5 @@
 ﻿using DevRainTest.DAL.Repositories.Abstract;
+using DevRainTest.DAL.ViewModels;
 using DevRainTest.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,26 +7,30 @@ namespace DevRainTest.DAL.Repositories.Concrete
 {
     public class UserLoginAttemptRepository : BaseRepository<UserLoginAttempt>, IUserLoginAttemptRepository
     {
-        private readonly Microsoft.EntityFrameworkCore.DbContext _context;
         public UserLoginAttemptRepository(DbContext.DevRainDbContext context) : base(context)
         {
-            _context = context;
+
         }
 
         public async Task InitUserLoginAttempt(List<UserLoginAttempt> userLoginAttempts)
         {
-            await _context.AddRangeAsync(userLoginAttempts);
-            await _context.SaveChangesAsync();
+            await Context.AddRangeAsync(userLoginAttempts);
+            await Context.SaveChangesAsync();
         }
 
         public async Task RemoveOldUserLoginAttempts()
         {
-            await _context.Database.ExecuteSqlRawAsync("Delete from TBL_USER_LOGIN_ATTEMPT");
+            await Context.Database.ExecuteSqlRawAsync("Delete from TBL_USER_LOGIN_ATTEMPT");
         }
 
-        public async Task<UserLoginAttempt> Statistic(DateTime? startDate, DateTime? endDate, DateTime metric, bool? isSuccess)
+        public async Task<UserLoginAttempt> Statistic(FilterViewModelEntity filterViewModelEntity)
         {
-            throw new NotImplementedException();
+            if (filterViewModelEntity.Metric == "Hour")
+            {
+                var result = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt > filterViewModelEntity.StartDate && x.Attempt < filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess).GroupBy(x =>x.Attempt.Hour ).ToListAsync();
+                
+            }
+            return null;
         }
     }
 }

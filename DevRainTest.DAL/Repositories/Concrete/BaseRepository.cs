@@ -5,12 +5,18 @@ namespace DevRainTest.DAL.Repositories.Concrete
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, new()
     {
-        private readonly Microsoft.EntityFrameworkCore.DbContext _context;
+        protected readonly Microsoft.EntityFrameworkCore.DbContext Context;
         private readonly DbSet<TEntity> _dbSet;
         public BaseRepository(Microsoft.EntityFrameworkCore.DbContext context)
         {
-            _context = context;
-            _dbSet = _context.Set<TEntity>();
+            Context = context;
+            _dbSet = Context.Set<TEntity>();
+        }
+
+        public async Task<IQueryable<TEntity>> GetAllAsync()
+        {
+            var result = await _dbSet.ToListAsync();
+            return result.AsQueryable();
         }
     }
 }

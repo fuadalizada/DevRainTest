@@ -11,7 +11,7 @@ namespace DevRainTest.Business.Services.Concrete
         private readonly IUserLoginAttemptRepository _userLoginAttemptRepository;
         private readonly IMapper _mapper;
 
-        public UserLoginAttemptService(IUserLoginAttemptRepository userLoginAttemptRepository,IMapper mapper) : base(userLoginAttemptRepository,mapper)
+        public UserLoginAttemptService(IUserLoginAttemptRepository userLoginAttemptRepository, IMapper mapper) : base(userLoginAttemptRepository, mapper)
         {
             _userLoginAttemptRepository = userLoginAttemptRepository;
             _mapper = mapper;
@@ -28,9 +28,17 @@ namespace DevRainTest.Business.Services.Concrete
             await _userLoginAttemptRepository.RemoveOldUserLoginAttempts();
         }
 
-        public async Task<UserLoginAttemptDto> Statistic(DateTime? startDate, DateTime? endDate, DateTime metric, bool? isSuccess)
+        public async Task<UserLoginAttemptDto> Statistic(FilterViewModelDto filterViewModelDto)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrWhiteSpace(filterViewModelDto.Metric))
+            {
+                if (filterViewModelDto.StartDate is not null && filterViewModelDto.EndDate is not null && filterViewModelDto.IsSuccess is not null)
+                {
+                    var filterViewModelEntity = _mapper.Map<FilterViewModelEntity>(filterViewModelDto);
+                    var result = await _userLoginAttemptRepository.Statistic(filterViewModelEntity);
+                }
+            }
+            return null;
         }
     }
 }

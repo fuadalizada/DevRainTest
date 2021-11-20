@@ -13,6 +13,7 @@ namespace DevRainTest.Business.MapConfiguration
 
             CreateMap<UserDto,User>().ReverseMap();
             CreateMap<UserLoginAttemptDto,UserLoginAttempt>().ReverseMap();
+            CreateMap<FilterViewModelDto,FilterViewModelEntity>().ReverseMap();
         }
     }
 }

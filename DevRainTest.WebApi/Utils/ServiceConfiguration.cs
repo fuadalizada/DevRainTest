@@ -6,6 +6,8 @@ using DevRainTest.DAL.DbContext;
 using DevRainTest.DAL.Repositories.Abstract;
 using DevRainTest.DAL.Repositories.Concrete;
 using DevRainTest.DAL.Settings;
+using DevRainTest.WebApi.MapConfiguration;
+using DevRainTest.WebApi.ServiceFacades;
 using Microsoft.EntityFrameworkCore;
 
 namespace DevRainTest.WebApi.Utils
@@ -24,10 +26,12 @@ namespace DevRainTest.WebApi.Utils
             });
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddAutoMapper(typeof(MapperConfig), typeof(MapConfig));
 
             DependencyInjectionRepositories(services);
             DependencyInjectionServices(services);
-            DependencyInjectionMappers(services);
+            DependencyInjectionFacades(services);
+            //DependencyInjectionMappers(services);
         }
 
         public void DependencyInjectionRepositories(IServiceCollection service)
@@ -41,12 +45,20 @@ namespace DevRainTest.WebApi.Utils
             service.AddScoped<IUserService, UserService>();
             service.AddScoped<IUserLoginAttemptService, UserLoginAttemptService>();
         }
-
-        private void DependencyInjectionMappers(IServiceCollection service)
+        public void DependencyInjectionFacades(IServiceCollection service)
         {
-            var mapConfig = new MapperConfiguration(config => { config.AddProfile(new MapperConfig()); });
-            IMapper mapper = mapConfig.CreateMapper();
-            service.AddSingleton(mapper);
+            service.AddScoped<UserServiceFacade>();
+            service.AddScoped<UserLoginAttemptServiceFacade>();
         }
+
+        //private void DependencyInjectionMappers(IServiceCollection service)
+        //{
+        //    var mapConfig = new MapperConfiguration(config => { config.AddProfile(new MapperConfig()); });
+        //    var mapConfg = new MapperConfiguration(config => { config.AddProfile(new MapConfig()); });
+        //    IMapper mapper = mapConfig.CreateMapper();
+        //    IMapper mapp = mapConfg.CreateMapper();
+        //    service.AddSingleton(mapper);
+        //    service.AddSingleton(mapp);
+        //}
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IBaseRepository<TEntity> where TEntity : class, new()
     {
-
+        Task<IQueryable<TEntity>> GetAllAsync();
     }
 }

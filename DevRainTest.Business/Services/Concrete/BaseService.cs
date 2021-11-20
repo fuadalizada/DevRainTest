@@ -13,5 +13,12 @@ namespace DevRainTest.Business.Services.Concrete
             _repository = repository;
             _mapper = mapper;
         }
+
+        public async Task<IQueryable<TDto>> GetAllAsync()
+        {
+            var entity = await _repository.GetAllAsync();
+            var result = _mapper.ProjectTo<TDto>(entity);
+            return result;
+        }
     }
 }

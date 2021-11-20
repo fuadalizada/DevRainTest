@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yNjYfEZyMz3Wr0fgQd24C9b4B0x6mDBdePy00K26TdU5BpwfMwnddK7Sh6wpb0QPl7IHpbcLyXJhjDXXPHRLVw==",
+  "dgSpecHash": "aRWsDVYKXYxFxuAhgL9CXWDNP4nTGjFUBFf3Ro2RMB4hO35phAS56YMF6aQ6aGvqX8y5fXWy/25HZ7ZMbA6/NQ==",
   "success": true,
   "projectFilePath": "D:\\VisualStudio2019\\DevRainTest\\DevRainTest.WebApi\\DevRainTest.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fu.alizada\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\fu.alizada\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\fu.alizada\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fu.alizada\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.0\\microsoft.aspnetcore.jsonpatch.6.0.0.nupkg.sha512",
     "C:\\Users\\fu.alizada\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.0.nupkg.sha512",
