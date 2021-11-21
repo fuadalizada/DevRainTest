@@ -1,4 +1,5 @@
 using DevRainTest.DAL.Settings;
+using DevRainTest.WebApi.Middleware;
 using DevRainTest.WebApi.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseMiddleware<ApiKeyMiddleware>();
 app.MapControllers();
 
 app.Run();

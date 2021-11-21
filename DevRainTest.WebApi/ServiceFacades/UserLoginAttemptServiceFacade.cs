@@ -9,7 +9,13 @@ namespace DevRainTest.WebApi.ServiceFacades
             var userLoginAttempts = new List<UserLoginAttemptDto>();
             foreach (var item in users)
             {
-                userLoginAttempts.Add(new UserLoginAttemptDto { Id = Guid.NewGuid(), Attempt = DateTime.Now, IsSuccess = true, UserId = item.Id });
+                userLoginAttempts.Add(new UserLoginAttemptDto 
+                { 
+                    Id = Guid.NewGuid(),
+                    Attempt = Convert.ToDateTime(DateTime.Now.ToString("MM/dd/yyyy HH:mm")),
+                    IsSuccess = true,
+                    UserId = item.Id 
+                });
             }
             return userLoginAttempts;
         }

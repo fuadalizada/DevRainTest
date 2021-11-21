@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DevRainTest.Business.DTOs;
+using DevRainTest.DAL.ViewModels;
 using DevRainTest.Domain.Entities;
 
 namespace DevRainTest.Business.MapConfiguration
@@ -14,6 +15,7 @@ namespace DevRainTest.Business.MapConfiguration
             CreateMap<UserDto,User>().ReverseMap();
             CreateMap<UserLoginAttemptDto,UserLoginAttempt>().ReverseMap();
             CreateMap<FilterViewModelDto,FilterViewModelEntity>().ReverseMap();
+            CreateMap<UserLoginAttemptStatisticDtoViewModel, UserLoginAttemptStatisticEntityViewModel>().ReverseMap();
         }
     }
 }

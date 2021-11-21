@@ -28,14 +28,19 @@ namespace DevRainTest.Business.Services.Concrete
             await _userLoginAttemptRepository.RemoveOldUserLoginAttempts();
         }
 
-        public async Task<UserLoginAttemptDto> Statistic(FilterViewModelDto filterViewModelDto)
+        public async Task<IQueryable<UserLoginAttemptStatisticDtoViewModel>> Statistic(FilterViewModelDto filterViewModelDto)
         {
             if (!string.IsNullOrWhiteSpace(filterViewModelDto.Metric))
             {
                 if (filterViewModelDto.StartDate is not null && filterViewModelDto.EndDate is not null && filterViewModelDto.IsSuccess is not null)
                 {
                     var filterViewModelEntity = _mapper.Map<FilterViewModelEntity>(filterViewModelDto);
-                    var result = await _userLoginAttemptRepository.Statistic(filterViewModelEntity);
+                    var userLoginAttemptStatisticEntityViewModel = await _userLoginAttemptRepository.Statistic(filterViewModelEntity);
+                    if (userLoginAttemptStatisticEntityViewModel.Any())
+                    {
+                        var result = _mapper.ProjectTo<UserLoginAttemptStatisticDtoViewModel>(userLoginAttemptStatisticEntityViewModel);
+                        return result;
+                    }
                 }
             }
             return null;

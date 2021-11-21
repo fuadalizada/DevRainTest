@@ -12,6 +12,7 @@ namespace DevRainTest.WebApi.Controllers
     {
         private readonly IUserLoginAttemptService _userLoginAttemptService;
         private readonly IMapper _mapper;
+
         public UserLoginAttemptController(IUserLoginAttemptService userLoginAttemptService,IMapper mapper)
         {
             _userLoginAttemptService = userLoginAttemptService;
@@ -24,7 +25,11 @@ namespace DevRainTest.WebApi.Controllers
         {
             var dto = _mapper.Map<FilterViewModelDto>(filterViewModel);
             var result = await _userLoginAttemptService.Statistic(dto);
-            return Ok();
+            if (result is null)
+            {
+                return NotFound();
+            }
+            return new JsonResult(result);
         }
     }
 }

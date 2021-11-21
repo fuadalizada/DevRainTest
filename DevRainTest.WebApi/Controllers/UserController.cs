@@ -1,5 +1,4 @@
-﻿using DevRainTest.Business.DTOs;
-using DevRainTest.Business.Services.Abstract;
+﻿using DevRainTest.Business.Services.Abstract;
 using DevRainTest.WebApi.ServiceFacades;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +12,7 @@ namespace DevRainTest.WebApi.Controllers
         private readonly IUserLoginAttemptService _userLoginAttemptService;
         private readonly UserServiceFacade _userServiceFacade;
         private readonly UserLoginAttemptServiceFacade _userLoginAttemptServiceFacade;
+
         public UserController(IUserService userService, IUserLoginAttemptService userLoginAttemptService, UserServiceFacade userServiceFacade, UserLoginAttemptServiceFacade userLoginAttemptServiceFacade)
         {
             _userService = userService;
@@ -28,7 +28,7 @@ namespace DevRainTest.WebApi.Controllers
             if (!string.IsNullOrWhiteSpace(email))
             {
                 var result = await _userService.GetByEmail(email);
-                if (result == null)
+                if (result is null)
                     return NotFound();
                 return new JsonResult(result);
             }

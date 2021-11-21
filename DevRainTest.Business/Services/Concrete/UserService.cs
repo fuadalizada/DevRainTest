@@ -17,16 +17,15 @@ namespace DevRainTest.Business.Services.Concrete
         }
         public async Task<IQueryable<UserDto>> GetByEmail(string email)
         {
-            IQueryable <UserDto> result = null;
             if (IsValidEmail(email))
             {
                 var user = await _userRepository.GetByEmail(email);
-                if (user == null)
+                if (!user.Any())
                     return null;
-                result = _mapper.ProjectTo<UserDto>(user);
+                var result = _mapper.ProjectTo<UserDto>(user);
                 return result;
             }
-            return null;           
+            return null;
         }
 
         public async Task InitUser(List<UserDto> users)
@@ -53,7 +52,6 @@ namespace DevRainTest.Business.Services.Concrete
             }
             catch
             {
-
                 return false;
             }
         }
