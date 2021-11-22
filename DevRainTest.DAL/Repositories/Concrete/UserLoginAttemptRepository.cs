@@ -26,9 +26,11 @@ namespace DevRainTest.DAL.Repositories.Concrete
         public async Task<IQueryable<UserLoginAttemptStatisticEntityViewModel>> Statistic(FilterViewModelEntity filterViewModelEntity)
         {
             List<UserLoginAttemptStatisticEntityViewModel> query = new();
-            if (filterViewModelEntity.Metric.ToLower().Trim() == "hour")
+
+            switch (filterViewModelEntity.Metric.ToLower().Trim())
             {
-                query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
+                case "hour":
+                    query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
                    .GroupBy(row => new
                    {
                        Date = row.Attempt,
@@ -39,10 +41,9 @@ namespace DevRainTest.DAL.Repositories.Concrete
                            Period = grp.Key.Date.ToString("yyyy-MM-dd HH:mm"),
                            Value = grp.Count()
                        }).ToListAsync();
-            }
-            else if (filterViewModelEntity.Metric.ToLower().Trim() == "month")
-            {
-                query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
+                    break;
+                case "month":
+                    query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
                     .GroupBy(row => new
                     {
                         Date = row.Attempt,
@@ -53,10 +54,9 @@ namespace DevRainTest.DAL.Repositories.Concrete
                             Period = grp.Key.Date.ToString("Y"),
                             Value = grp.Count()
                         }).ToListAsync();
-            }
-            else if (filterViewModelEntity.Metric.ToLower().Trim() == "year")
-            {
-                query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
+                    break;
+                case "year":
+                    query = await Context.Set<UserLoginAttempt>().Where(x => (x.Attempt >= filterViewModelEntity.StartDate && x.Attempt <= filterViewModelEntity.EndDate) && x.IsSuccess == filterViewModelEntity.IsSuccess)
                     .GroupBy(row => new
                     {
                         Date = row.Attempt,
@@ -67,7 +67,10 @@ namespace DevRainTest.DAL.Repositories.Concrete
                             Period = grp.Key.Date.ToString("yyyy"),
                             Value = grp.Count()
                         }).ToListAsync();
-            }
+                    break;
+                default:
+                    break;
+            }            
             return query.AsQueryable();
         }
     }

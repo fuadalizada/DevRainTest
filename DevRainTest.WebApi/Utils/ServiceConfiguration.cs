@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using DevRainTest.Business.MapConfiguration;
+﻿using DevRainTest.Business.MapConfiguration;
 using DevRainTest.Business.Services.Abstract;
 using DevRainTest.Business.Services.Concrete;
 using DevRainTest.DAL.DbContext;
@@ -31,7 +30,6 @@ namespace DevRainTest.WebApi.Utils
             DependencyInjectionRepositories(services);
             DependencyInjectionServices(services);
             DependencyInjectionFacades(services);
-            //DependencyInjectionMappers(services);
         }
 
         public void DependencyInjectionRepositories(IServiceCollection service)
@@ -49,16 +47,6 @@ namespace DevRainTest.WebApi.Utils
         {
             service.AddScoped<UserServiceFacade>();
             service.AddScoped<UserLoginAttemptServiceFacade>();
-        }
-
-        //private void DependencyInjectionMappers(IServiceCollection service)
-        //{
-        //    var mapConfig = new MapperConfiguration(config => { config.AddProfile(new MapperConfig()); });
-        //    var mapConfg = new MapperConfiguration(config => { config.AddProfile(new MapConfig()); });
-        //    IMapper mapper = mapConfig.CreateMapper();
-        //    IMapper mapp = mapConfg.CreateMapper();
-        //    service.AddSingleton(mapper);
-        //    service.AddSingleton(mapp);
-        //}
+        }       
     }
 }
